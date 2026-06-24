@@ -50,30 +50,13 @@ A lightweight, freestanding implementation of the C standard library for Linux x
 
 ##  Building
 
-### Build the Library
-
 ```bash
-cd src/
 make
-```
-
-### Build Sample Programs
-
-```bash
-cd samples/
-make
-```
-
-### Run Tests
-
-```bash
-cd tests/
-make test
 ```
 
 ##  Implementation Details
 
-### String Manipulation (`src/string/`)
+### String Manipulation (`string/`)
 
 Implements all essential POSIX string functions with proper memory handling:
 
@@ -81,7 +64,7 @@ Implements all essential POSIX string functions with proper memory handling:
 - Pattern matching (`strstr`, `strrstr`)
 - Memory operations (`memcpy`, `memmove`, `memset`, `memcmp`)
 
-### File I/O (`src/io/`)
+### File I/O (`io/`)
 
 Direct syscall-based file operations:
 
@@ -91,7 +74,7 @@ Direct syscall-based file operations:
 - File size control (`truncate`, `ftruncate`)
 - Standard output support (`puts`)
 
-### Memory Management (`src/mm/`)
+### Memory Management (`mm/`)
 
 Custom memory allocator with metadata tracking:
 
@@ -99,14 +82,14 @@ Custom memory allocator with metadata tracking:
 - Memory mapping (`mmap`, `mremap`, `munmap`)
 - Internal linked list for allocation tracking
 
-### File Metadata (`src/stat/`)
+### File Metadata (`stat/`)
 
 File information retrieval:
 
 - `stat`, `fstat` for file statistics
 - `fstatat` for relative path operations
 
-### Process Control (`src/process/`)
+### Process Control (`process/`)
 
 Process-level operations:
 
@@ -148,22 +131,6 @@ int main() {
 
     return 0;
 }
-```
-
-##  Testing
-
-The comprehensive test suite validates:
-
-- String function correctness and edge cases
-- Memory allocation/deallocation
-- File I/O operations
-- System error conditions
-- Memory safety
-
-Run tests with:
-
-```bash
-make test -C tests/
 ```
 
 ##  Learning Outcomes
