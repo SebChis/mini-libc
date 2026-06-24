@@ -19,7 +19,7 @@ A lightweight, freestanding implementation of the C standard library for Linux x
 ##  Project Structure
 
 ```text
-src/
+/
 ├── string/          # String manipulation functions
 │   └── string.c
 ├── io/              # File I/O operations
